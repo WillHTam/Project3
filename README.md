@@ -1,3 +1,11 @@
+## Project 3 Client Side
+
+## Team Members
+* Justin Chan (Github: juschan)
+* Angel Coco Chen (Github: Sprazzeus)
+* William Tam (Github: WillHTam)
+* J Brian Lopez (Github: jbrianlopez)
+
 ![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
 ===========
 
@@ -57,9 +65,16 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
   - Programmatic control of slider to play/pause added
   - Plus many more bug fixes
 
-
 ## Contributing
 [Please read CONTRIBUTING.md for more information](CONTRIBUTING.md)
 
 ## Testing
 We use Jasmine as our testing framework and we're trying to write a robust test suite for our components. If you want to help, [here's a starting guide on how to write tests in Jasmine](https://docs.google.com/document/d/1dVM6qGt_b_y9RRhr9X7oZfFydaJIEqB9CT7yekv-4XE/edit?usp=sharing)
+
+
+## Instructions
+* Before beginning any work, please pull the latest master file, create your own branch, and check the TaskMeister board
+* Please run 'npm install' to ensure that all relevant packages are included
+* Please push to your new branch first and not master
+
+>>>>>>> 5599e2646391152bdc0d8bfe27fd2bfca5b5f3d1
