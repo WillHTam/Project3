@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $.ajax({
-    url: 'http://project3pockety.herokuapp.com/allresources',
+    url: 'https://project3pockety.herokuapp.com/allresources',
     success: function (data) {
       $('#cards').append('<div>HI</div>')
       // $.each(data, function (index, item) {
