@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+$('.modal-trigger').leanModal();
+
+// populate resource cards
+
   $.ajax({
     url: 'https://project3pockety.herokuapp.com/allresources',
     success: function (data) {
@@ -10,6 +14,5 @@ $(document).ready(function() {
     }
 
   })
-
 
 }) // end document ready
