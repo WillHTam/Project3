@@ -1,3 +1,16 @@
-main {
+main, nav {
   padding-left: 240px;
+}
+
+nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+height: 100%;
+}
+
+.header {
+    color: #ee6e73;
+    font-weight: 300;
+}
+
+main {
+  margin-top: 50px;
 }
