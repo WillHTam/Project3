@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+  <script type="text/javascript" src="js/bin/app.js"></script>
+<header>
+
+  <!-- sidebar nav -->
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0%);">
+    <li class="logo"><a id="logo-container" href="/" class="brand-logo">
+      <img src="images/work3.jpg" alt="logo" height="50px">(Stash Logo Here!)
+    </a></li>
+
+    <li class="bold"><a href="about.html" class="collapsible-header active waves-effect waves-teal">
+      <i class="material-icons tiny">list</i> My List</a></li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li class="bold"><a class="collapsible-header waves-effect waves-teal">
+            <i class="material-icons tiny">supervisor_account</i> Shared With Me
+            <span class="chevron" style="padding-left: 13px;">&#x25BE</span></a>
+            <div class="collapsible-body" style="">
+              <ul>
+                <li><a href="color.html">Project 3</a></li>
+                <li><a href="grid.html">WDI</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="bold active"><a class="collapsible-header active waves-effect waves-teal">
+            <i class="material-icons tiny">loyalty</i> My Collections
+            <span class="chevron2" style="padding-left: 20px;">&#x25BE</span></a>
+            <div class="collapsible-body" style="display: block;">
+              <ul>
+                <li><a href="badges.html">NodeJS</a></li>
+                <li><a href="buttons.html">Front-end</a></li>
+                <li><a href="breadcrumbs.html">UX</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Dropdown</a>
+            <div class="collapsible-body" style="">
+              <ul>
+                <li><a href="collapsible.html">Collapsible</a></li>
+                <li><a href="dialogs.html">Dialogs</a></li>
+                <li><a href="dropdown.html">Dropdown</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Mobile</a></li>
+      <li class="bold">
+        <a href="showcase.html" class="collapsible-header active waves-effect waves-teal">
+          <i class="material-icons tiny">settings</i> Settings</a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- search bar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper" style="background-color: lightseagreen;">
+          <form>
+            <div class="input-field">
+              <input placeholder="Search for resources and tags..." id="search" type="search" required>
+              <label for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <!-- taskbar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <!-- <a class="page-title"></a> -->
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html"><i class="material-icons">add_circle_outline</i></a></li>
+            <li><a href="badges.html"><i class="material-icons">supervisor_account</i></a></li>
+            <li><a href="collapsible.html"><i class="material-icons">settings</i></a></li>
+            <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- page content, cards -->
+    <main>
+      <div class="container">
+        <div class="row" id="cards">
+
+          <div class="col s6">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/work3.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                <p><span class="tag">Tag Here</span></a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+              <div class="card-action">
+                <span class="resource-date">Jul 18, 2016</span>
+                <a href="#" class="resource-original">Go to original</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s6">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/work3.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                <p><span class="tag">Tag Here</span></a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+              <div class="card-action">
+                <span class="resource-date">Jul 18, 2016</span>
+                <a href="#" class="resource-original">Go to original</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s6">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/work3.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                <p><span class="tag">Tag Here</span></a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+              <div class="card-action">
+                <span class="resource-date">Jul 18, 2016</span>
+                <a href="#" class="resource-original">Go to original</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s6">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/work3.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                <p><span class="tag">Tag Here</span></a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+              <div class="card-action">
+                <span class="resource-date">Jul 18, 2016</span>
+                <a href="#" class="resource-original">Go to original</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+
+  </body>
+  </html>
