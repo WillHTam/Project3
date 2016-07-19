@@ -26,6 +26,7 @@ function login (formData) {
       // else output error
       console.log(xhr.status)
       console.log(thrownError)
+      console.log(response.auth_token)
       window.alert('Login Failed')
     }
   })
