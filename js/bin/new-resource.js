@@ -15,10 +15,12 @@ function newResource (formData) {
     type: 'POST',
     url: serverURL + 'resources',
     data: formData,
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader('email', window.localStorage['email'])
+      xhr.setRequestHeader('auth_token', window.localStorage['auth_token'])
+      console.log('sending ajax for new resource')
+    },
     success: function (response) {
-      // success save the repsonse
-      window.localStorage.email = $('#email').val()
-      window.localStorage.auth_token = response.auth_token
       // then redirect
       window.location.href = 'dashboard.html'
     },
