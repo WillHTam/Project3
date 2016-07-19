@@ -6178,5 +6178,11 @@ main {
   float: right;
   margin-right: 0; }
 
-.resource-date {
+.resource-site_name {
   opacity: 0.4; }
+
+.tabs .tab {
+  min-width: 140px; }
+
+.favicon {
+  padding-right: 5px; }

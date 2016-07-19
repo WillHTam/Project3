@@ -14,8 +14,11 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/bin/materialize.min.js"></script>
-  <script src="./js/bin/user_auth.js"></script>
   <script type="text/javascript" src="js/bin/dashboard.js"></script>
+
+  <!-- masonry scripts -->
+  <script src="js/bin/masonry.pkgd.min.js"></script>
+  <script src="js/bin/init.js"></script>
   <header>
 
     <!-- sidebar nav -->
@@ -99,11 +102,32 @@
         </nav>
       </div>
 
+      <!-- tabs bar -->
+      <div class="row" style="margin-left:240px;">
+        <div class="col s12">
+          <ul class="tabs" id="tabs">
+            <li class="tab col s3"><a href="#test1">Something long long tag</a></li>
+            <li class="tab col s3"><a class="active" href="#test2">Tag Blah</a></li>
+            <li class="tab col s3"><a href="#test4">Natural</a></li>
+            <li class="tab col s3"><a href="#test4">Testing</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 5</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 6</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 7</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 8</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 4</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 5</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 6</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 7</a></li>
+            <li class="tab col s3"><a href="#test4">Tag 8</a></li>
+          </ul>
+        </div>
+      </div>
+
       <!-- add new resource modal -->
       <div id="modal1" class="modal">
         <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
+          <h4>Stash something!</h4>
+          
         </div>
         <div class="modal-footer">
           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -113,89 +137,10 @@
       <!-- page content, cards -->
       <main>
         <div class="container">
-          <div class="row" id="cards">
-
-            <div class="col s6">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="images/work3.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4" style="line-height: 1.5;">Kanye West and Adidas announce huge partnership including new stores<i class="material-icons right">more_vert</i></span>
-                  <p><span class="tag">Tag Here</span></a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Kanye West and Adidas announce huge partnership including new stores<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-                <div class="card-action">
-                  <span class="resource-date">Jul 18, 2016</span>
-                  <a href="#" class="resource-original">Go to original</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s6">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="images/work3.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                  <p><span class="tag">Tag Here</span></a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-                <div class="card-action">
-                  <span class="resource-date">Jul 18, 2016</span>
-                  <a href="#" class="resource-original">Go to original</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s6">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="images/work3.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                  <p><span class="tag">Tag Here</span></a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-                <div class="card-action">
-                  <span class="resource-date">Jul 18, 2016</span>
-                  <a href="#" class="resource-original">Go to original</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s6">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="images/work3.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                  <p><span class="tag">Tag Here</span></a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-                <div class="card-action">
-                  <span class="resource-date">Jul 18, 2016</span>
-                  <a href="#" class="resource-original">Go to original</a>
-                </div>
-              </div>
-            </div>
+          <div class="row cards" id="masonry-grid">
 
           </div>
+          <!-- end masonry grid row div -->
 
         </div>
       </main>
