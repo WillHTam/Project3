@@ -23,6 +23,7 @@ function instaparser (url) {
     success: function (result) {
       console.log("Successful request to instaparser!")
       var title = result.title
+      return title
     },
     error: function () {
       console.log('ajax error')
@@ -44,9 +45,8 @@ function instaparser (url) {
       success: function (response) {
         console.log('receive response from server: ' + response)
         $.each(response, function (index, item) {
-          instaparser(item.url)
           $('.cards').append(
-            '<div class="col s6"><div class="card"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/work3.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4" style="line-height: 1.5;"><i class="material-icons right">more_vert</i>' + item.title + '</span><p><br><div class="chip">Tag</div><div class="chip">Tag 2 yo!<!-- <i class="material-icons">close</i> --></div></p></div><div class="card-reveal"><span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>' + item.title + '</span><p>' + item.summary + '</p><p><br><div class="chip">Tag<i class="material-icons">close</i></div><div class="chip">Tag 2 yo!<i class="material-icons">close</i></div></p></div><div class="card-action">' + '<img class="favicon" src="' + 'http://www.google.com/s2/favicons?domain=' + item.site_name + '">' + '<span class="resource-site_name">' + item.site_name + '</span><a href="' + item.url + '" class="resource-original" target="_blank">Open original<i class="material-icons right">open_in_new</i></a></div></div></div>'
+            '<div class="col s6"><div class="card"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/work3.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4" style="line-height: 1.5;"><i class="material-icons right">more_vert</i>' + instaparser(item.url) + '</span><p><br><div class="chip">Tag</div><div class="chip">Tag 2 yo!<!-- <i class="material-icons">close</i> --></div></p></div><div class="card-reveal"><span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>' + instaparser(item.url) + '</span><p>' + item.summary + '</p><p><br><div class="chip">Tag<i class="material-icons">close</i></div><div class="chip">Tag 2 yo!<i class="material-icons">close</i></div></p></div><div class="card-action">' + '<img class="favicon" src="' + 'http://www.google.com/s2/favicons?domain=' + item.site_name + '">' + '<span class="resource-site_name">' + item.site_name + '</span><a href="' + item.url + '" class="resource-original" target="_blank">Open original<i class="material-icons right">open_in_new</i></a></div></div></div>'
         )
       })
     }, // end success action
