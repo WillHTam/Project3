@@ -10,9 +10,10 @@ $(function () {
 })
 
 function newResource (formData) {
+  console.log(formData)
   $.ajax({
     type: 'POST',
-    url: serverURL + 'resource',
+    url: serverURL + 'resources',
     data: formData,
     success: function (response) {
       // success save the repsonse
