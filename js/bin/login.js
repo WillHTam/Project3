@@ -18,7 +18,6 @@ function login (formData) {
       // success save the repsonse
       window.localStorage.email = $('#email').val()
       window.localStorage.auth_token = response.auth_token
-      console.log(response.auth_token)
       // then redirect
       window.location.href = 'dashboard.html'
     },
@@ -26,7 +25,6 @@ function login (formData) {
       // else output error
       console.log(xhr.status)
       console.log(thrownError)
-      console.log(response.auth_token)
       window.alert('Login Failed')
     }
   })
