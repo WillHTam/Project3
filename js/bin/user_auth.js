@@ -14,8 +14,8 @@ function loadUser () {
     type: 'GET',
     url: serverURL + 'user',
     beforeSend: function (xhr) {
-      xhr.setRequestHeader('User-Email', window.localStorage['email'])
-      xhr.setRequestHeader('Auth-Token', window.localStorage['auth_token'])
+      xhr.setRequestHeader('email', window.localStorage['email'])
+      xhr.setRequestHeader('auth_token', window.localStorage['auth_token'])
     },
     success: function (response) {
       console.log(response)
