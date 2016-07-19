@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+console.log(window.localStorage.email + window.localStorage.auth_token)
 $('.modal-trigger').leanModal();
 
 // populate resource cards
