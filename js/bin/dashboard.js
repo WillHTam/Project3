@@ -9,9 +9,10 @@ $(document).ready(function() {
     else loadResources()
   })
 
-  console.log(window.localStorage.email + window.localStorage.auth_token)
+  // load page jquery and user greeting
   $('.modal-trigger').leanModal();
   $('.greeting').html("Welcome, " + window.localStorage['email'])
+
   // populate resource cards
   function loadResources () {
     $.ajax({
@@ -21,12 +22,12 @@ $(document).ready(function() {
       beforeSend: function (xhr) {
         xhr.setRequestHeader('email', window.localStorage['email'])
         xhr.setRequestHeader('auth_token', window.localStorage['auth_token'])
-        console.log('sending ajax')
+        console.log('sending ajax for loading resources')
       },
       success: function (response) {
         console.log('receive response from server: ' + response)
         $.each(response, function (index, item) {
-          $('.cards').append('<div class="col s6"><div class="card"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/work3.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4" style="line-height: 1.5;"><i class="material-icons right">more_vert</i>' + item.title + '</span><p><br><div class="chip">Tag</div><div class="chip">Tag 2 yo!<!-- <i class="material-icons">close</i> --></div></p></div><div class="card-reveal"><span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>' + item.title + '</span><p>' + item.summary + '</p><p><br><div class="chip">Tag<i class="material-icons">close</i></div><div class="chip">Tag 2 yo!<i class="material-icons">close</i></div></p></div><div class="card-action">' + '<img class="favicon" src="' + 'http://www.google.com/s2/favicons?domain=' + item.site_name + '">' + '<span class="resource-site_name">' + item.site_name + '</span><a href="' + item.url + '" class="resource-original">Open original<i class="material-icons right">open_in_new</i></a></div></div></div>'
+          $('.cards').append('<div class="col s6"><div class="card"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/work3.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4" style="line-height: 1.5;"><i class="material-icons right">more_vert</i>' + item.title + '</span><p><br><div class="chip">Tag</div><div class="chip">Tag 2 yo!<!-- <i class="material-icons">close</i> --></div></p></div><div class="card-reveal"><span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>' + item.title + '</span><p>' + item.summary + '</p><p><br><div class="chip">Tag<i class="material-icons">close</i></div><div class="chip">Tag 2 yo!<i class="material-icons">close</i></div></p></div><div class="card-action">' + '<img class="favicon" src="' + 'http://www.google.com/s2/favicons?domain=' + item.site_name + '">' + '<span class="resource-site_name">' + item.site_name + '</span><a href="' + item.url + '" class="resource-original" target="_blank">Open original<i class="material-icons right">open_in_new</i></a></div></div></div>'
         )
       })
     }, // end success action
