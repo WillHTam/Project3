@@ -49,5 +49,22 @@ main {
 }
 
 .greeting {
-  margin-left: 10px;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+#url::-webkit-input-placeholder {
+   color: lightgrey;
+}
+
+#url:-moz-placeholder { /* Firefox 18- */
+   color: lightgrey;
+}
+
+#url::-moz-placeholder {  /* Firefox 19+ */
+   color: lightgrey;
+}
+
+#url:-ms-input-placeholder {
+   color: lightgrey;
 }
