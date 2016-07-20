@@ -6191,6 +6191,9 @@ main {
   margin-left: 15px;
   font-size: 1.2rem; }
 
+.card .card-title {
+  font-size: 20px; }
+
 #url::-webkit-input-placeholder {
   color: lightgrey; }
 
@@ -6204,6 +6207,3 @@ main {
 
 #url:-ms-input-placeholder {
   color: lightgrey; }
-
-#delete.material-icons {
-  bottom: 0; }

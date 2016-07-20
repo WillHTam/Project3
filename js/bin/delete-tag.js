@@ -1,5 +1,5 @@
 var serverURL = 'https://project3pockety.herokuapp.com/'
-console.log('delete-resource.js loaded')
+console.log('delete-tag.js loaded')
 
 $(function listenDelete () {
   // listen for delete button
