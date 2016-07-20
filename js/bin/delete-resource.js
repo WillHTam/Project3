@@ -3,8 +3,7 @@ console.log('delete-resource.js loaded')
 
 $(function listenDelete () {
   // listen for delete button
-  $('.cards').on('click', '#delete', function (event) {
-    console.log('heard click!')
+  $('.cards').on('click', 'button', function (event) {
     var resource = document.getElementById('resource');
     var resourceID = resource.dataset.id
     console.log('heard delete click event for resource ID ' + resourceID)
@@ -17,7 +16,7 @@ function deleteResource (resourceID) {
   $.ajax({
     type: 'DELETE',
     url: serverURL + 'resources',
-    data: resourceID,
+    data: 'id=' + resourceID,
     beforeSend: function (xhr) {
       xhr.setRequestHeader('email', window.localStorage['email'])
       xhr.setRequestHeader('auth_token', window.localStorage['auth_token'])
