@@ -3,12 +3,12 @@ main, nav {
 }
 
 nav .nav-wrapper form, nav .nav-wrapper form .input-field{
-height: 100%;
+  height: 100%;
 }
 
 .header {
-    color: #ee6e73;
-    font-weight: 300;
+  color: #ee6e73;
+  font-weight: 300;
 }
 
 main {
@@ -16,19 +16,19 @@ main {
 }
 
 ::-webkit-input-placeholder {
-   color: white;
+  color: white;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: white;
+  color: white;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: white;
+  color: white;
 }
 
 :-ms-input-placeholder {
-   color: white;
+  color: white;
 }
 
 .resource-original {
@@ -53,22 +53,29 @@ main {
   font-size: 1.2rem;
 }
 
+.card .card-title {
+  font-size: 20px;
+}
+
 #url::-webkit-input-placeholder {
-   color: lightgrey;
+  color: lightgrey;
 }
 
 #url:-moz-placeholder { /* Firefox 18- */
-   color: lightgrey;
+  color: lightgrey;
 }
 
 #url::-moz-placeholder {  /* Firefox 19+ */
-   color: lightgrey;
+  color: lightgrey;
 }
 
 #url:-ms-input-placeholder {
-   color: lightgrey;
+  color: lightgrey;
 }
 
-#delete.material-icons {
-  bottom: 0;
-}
+// .line-clamp {
+//   overflow: hidden;
+//   display: -webkit-box;
+//   -webkit-line-clamp: 1;
+//   -webkit-box-orient: vertical;
+// }

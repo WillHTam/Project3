@@ -1,12 +1,12 @@
 var serverURL = 'https://project3pockety.herokuapp.com/'
-console.log('delete-resource.js loaded')
+console.log('delete-tag.js loaded')
 
 $(function listenDelete () {
   // listen for delete button
-  $('.cards').on('click', 'button', function (event) {
+  $('.cards').on('click', '#delete-tag', function (event) {
     var resource = document.getElementById('resource');
     var resourceID = resource.dataset.id
-    console.log('heard delete click event for resource ID ' + resourceID)
+    console.log('heard delete tag click event for resource ID ' + resourceID)
     deleteResource(resourceID)
   })
 })
