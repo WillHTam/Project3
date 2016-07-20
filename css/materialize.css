@@ -6204,3 +6204,6 @@ main {
 
 #url:-ms-input-placeholder {
   color: lightgrey; }
+
+#delete.material-icons {
+  bottom: 0; }
