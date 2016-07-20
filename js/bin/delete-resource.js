@@ -9,7 +9,7 @@ $(function listenDelete () {
     console.log(resource)
     var resourceID = resource.dataset.id
     console.log('heard delete click event for resource ID ' + resourceID)
-    // deleteResource(resourceID)
+    deleteResource(resourceID)
   })
 })
 

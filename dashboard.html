@@ -14,6 +14,7 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+  <script type="text/javascript" src="js/bin/materialize-tags.min.js"></script>
   <script type="text/javascript" src="js/bin/dashboard.js"></script>
   <script type="text/javascript" src="js/bin/new-resource.js"></script>
   <script type="text/javascript" src="js/bin/delete-resource.js"></script>
@@ -139,6 +140,13 @@
               <div class="input-field col s12">
                 <input id="url" type="url" class="validate" name="url" placeholder="http://www.yay.com">
                 <label for="url" class="" data-error="Please enter valid url." data-success="Ready to roll.">Enter a URL</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="tags">Tags</label>
+                <input type="text" name="tags" id="tags" value data-role="materialtags" style="display: none;">
               </div>
             </div>
 
