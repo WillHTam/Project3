@@ -3,7 +3,7 @@ console.log('delete-resource.js loaded')
 
 $(function listenDelete () {
   // listen for delete button
-  $('.cards').on('click', '#delete-resource', function (event) {
+  $('.cards').on('click', 'button', function (event) {
     var resource = document.getElementById('resource');
     var resourceID = resource.dataset.id
     console.log('heard delete click event for resource ID ' + resourceID)

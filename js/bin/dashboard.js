@@ -13,7 +13,6 @@ $(document).ready(function() {
   $('.modal-trigger').leanModal();
   $('.greeting').html("Welcome, " + window.localStorage['email'])
 
-
   // populate resource cards
   function loadResources () {
     $.ajax({
@@ -27,11 +26,12 @@ $(document).ready(function() {
       },
       success: function (response) {
         console.log('Received resources from server: ' + response)
+        $('main').html('<div class="container resources"><div class="row cards" id="masonry-grid"></div></div>')
         $.each(response, function (index, item) {
           $('.cards').append(
-            '<div class="col s6"><div class="card" id="resource" data-id="' + item._id + '"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/work3.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4" style="line-height: 1.5;"><i class="material-icons right">more_vert</i>' + item.title + '</span><p><br><div class="chip">' + item.tags[0] + '</div><div class="chip">' + item.tags[1] + '<!-- <i class="material-icons">close</i> --></div></p></div><div class="card-reveal"><span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>' + item.title + '</span><p>' + item.summary + '</p><br><div class="chip">' + item.tags[0] + '<i class="material-icons">close</i></div><div class="chip">' + item.tags[1] + ' yo!<i class="material-icons">close</i></div>' +
-            '<button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Delete<i class="material-icons id="delete>delete</i></button></div>' +
-            '<div class="card-action">' + '<img class="favicon" src="' + 'http://www.google.com/s2/favicons?domain=' + item.site_name + '">' + '<span class="resource-site_name">' + item.site_name + '</span><a href="' + item.url + '" class="resource-original" target="_blank">Open original<i class="material-icons right">open_in_new</i></a></div></div></div>'
+            '<div class="col s6"><div class="card" id="resource" data-id="' + item._id + '"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="images/work3.jpg"></div><div class="card-content"><span class="card-title activator grey-text text-darken-4" style="line-height: 1.5;"><i class="material-icons right">more_vert</i>' + item.title + '</span><p><br><div class="chip">' + item.tags[0] + '</div><div class="chip">' + item.tags[1] + '<!-- <i class="material-icons">close</i> --></div></p></div><div class="card-reveal"><span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>' + item.title + '</span><p>' + item.summary + '</p><br><div class="chip">' + item.tags[0] + '<i class="material-icons" id="delete-tag">close</i></div><div class="chip">' + item.tags[1] + '<i class="material-icons" id="delete-tag">close</i></div>' +
+            '<button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Delete<i class="material-icons"  id="delete-resource">delete</i></button></div>' +
+            '<div class="card-action">' + '<img class="favicon" src="' + 'https://www.google.com/s2/favicons?domain=' + item.site_name + '">' + '<span class="resource-site_name">' + item.site_name + '</span><a href="' + item.url + '" class="resource-original" target="_blank">Original<i class="material-icons right">open_in_new</i></a></div></div></div>'
           )
         })
       }, // end success action
