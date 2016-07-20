@@ -4,6 +4,10 @@ $(function () {
   // listen for the form login
   $('#new-resource-form').on('submit', function (event) {
     event.preventDefault()
+
+    // ajax to instaparser here, get remaining attributes
+    // save ajax results to formData
+
     var formData = $(this).serialize()
     newResource(formData)
   })
