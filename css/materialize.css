@@ -2118,7 +2118,7 @@ ul {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #ee6e73; }
+  border-left: 5px solid #00acc1; }
 
 i {
   line-height: inherit; }
@@ -2154,7 +2154,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #ee6e73; }
+    background-color: #00acc1; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2289,7 +2289,7 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #ee6e73; }
+  background-color: #00acc1; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
     height: 50px;
@@ -3036,7 +3036,7 @@ input[type=range] + .thumb {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #00acc1;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -3487,7 +3487,7 @@ small {
     width: 15%;
     min-width: 80px; }
     .tabs .tab a {
-      color: #ee6e73;
+      color: #00acc1;
       display: block;
       width: 100%;
       height: 100%;
@@ -3495,15 +3495,15 @@ small {
       overflow: hidden;
       transition: color .28s ease; }
       .tabs .tab a:hover {
-        color: #f9c9cb; }
+        color: #28e8ff; }
     .tabs .tab.disabled a {
-      color: #f9c9cb;
+      color: #28e8ff;
       cursor: default; }
   .tabs .indicator {
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: #f6b2b5;
+    background-color: #0fe5ff;
     will-change: left, right; }
 
 .material-tooltip {
@@ -5049,7 +5049,7 @@ input[type=range]:focus::-ms-fill-upper {
       transform: translateX(105%); } }
 .side-nav .collapsible-body li.active,
 .side-nav.fixed .collapsible-body li.active {
-  background-color: #ee6e73; }
+  background-color: #00acc1; }
   .side-nav .collapsible-body li.active a,
   .side-nav.fixed .collapsible-body li.active a {
     color: #fff; }
@@ -6147,18 +6147,41 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
+body {
+  background-color: #f5f5f5; }
+
 main, nav {
   padding-left: 240px; }
+
+main {
+  margin-top: 50px; }
 
 nav .nav-wrapper form, nav .nav-wrapper form .input-field {
   height: 100%; }
 
-.header {
-  color: #ee6e73;
-  font-weight: 300; }
+div .search {
+  background-color: #26c6da; }
 
-main {
-  margin-top: 50px; }
+.side-nav {
+  background-color: whitesmoke; }
+
+#logo {
+  margin: 40px 70px 0px 70px;
+  width: 100px; }
+
+.greeting {
+  margin-left: 15px;
+  font-size: 1.2rem; }
+
+.tabs {
+  background-color: transparent; }
+
+.tabs .tab {
+  min-width: 140px; }
+
+.header {
+  color: #7e57c2;
+  font-weight: 300; }
 
 ::-webkit-input-placeholder {
   color: white; }
@@ -6181,15 +6204,8 @@ main {
 .resource-site_name {
   opacity: 0.4; }
 
-.tabs .tab {
-  min-width: 140px; }
-
 .favicon {
   padding-right: 5px; }
-
-.greeting {
-  margin-left: 15px;
-  font-size: 1.2rem; }
 
 .card .card-title {
   font-size: 18px; }
