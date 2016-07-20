@@ -12,6 +12,7 @@ $(document).ready(function() {
   // load page jquery and user greeting
   $('.modal-trigger').leanModal();
   $('.greeting').html("Welcome, " + window.localStorage['email'])
+  $(".dropdown-button").dropdown();
 
   // populate resource cards
   function loadResources () {
