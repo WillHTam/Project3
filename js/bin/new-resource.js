@@ -11,6 +11,15 @@ $(function () {
 })
 
 function newResource (formData) {
+
+  var str1 = formData.split('&tags=')
+  var str2 = str1[1].split('%2C')
+  var result = [str1[0]]
+  for (var i=0; i<str2.length; i++ ) {
+    result.push(str2[i])
+  }
+  formData = str1.join('&tags=')
+
   console.log(formData)
   $.ajax({
     type: 'POST',
