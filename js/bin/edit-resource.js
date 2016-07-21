@@ -1,8 +1,6 @@
 var serverURL = 'https://project3pockety.herokuapp.com/'
 console.log('edit-tag.js loaded')
 
-
-// card button launched modal
 $(function listenEdit () {
   // listen for edit button
   $('.resources').on('click', '.edit-resource', function (event) {
