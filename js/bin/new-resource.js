@@ -18,7 +18,7 @@ function newResource (formData) {
   for (var i=0; i<str2.length; i++ ) {
     result.push(str2[i])
   }
-  formData = str1.join('&tags=')
+  formData = result.join('&tags=')
 
   console.log(formData)
   $.ajax({
