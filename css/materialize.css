@@ -6165,9 +6165,21 @@ div .search {
 .side-nav {
   background-color: whitesmoke; }
 
+h4.header {
+  color: #673ab7; }
+
+h2 {
+  color: #673ab7; }
+
 #logo {
   margin: 40px 70px 0px 70px;
   width: 100px; }
+
+#logo.center {
+  height: 200%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .greeting {
   margin-left: 15px;

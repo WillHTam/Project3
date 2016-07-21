@@ -17,13 +17,20 @@
   <script type="text/javascript" src="js/bin/login.js"></script>
 
   <header>
-    <nav><div class="nav-wrapper"><a class="page-title">Stash App</a></div></nav>
+    <nav>
+      <div class="nav-wrapper">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="register.html" id="login-state">Register</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <div class="container">
     <div class="row">
-      <h2 class="header">Welcome back!</h2>
-      
+      <img src="images/logo.png" alt="" id="logo" class="center">
+      <h4 class="header">Login</h4>
+
       <form id="login-form" class="col s12" action="https://project3pockety.herokuapp.com/login" method="post">
         <div class="row">
           <div class="input-field col s12">

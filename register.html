@@ -17,12 +17,19 @@
   <script type="text/javascript" src="js/bin/register.js"></script>
 
   <header>
-    <nav><div class="nav-wrapper"><a class="page-title">Stash App</a></div></nav>
+    <nav>
+      <div class="nav-wrapper">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="login.html" id="login-state">Login</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <div class="container">
     <div class="row">
-      <h2 class="header">Register to start stashin'.</h2>
+      <img src="images/logo.png" alt="" id="logo" class="center">
+      <h4 class="header">Register to start</h4>
 
       <form id="register-form" class="col s12" action="https://project3pockety.herokuapp.com/register" method="post">
         <div class="row">
