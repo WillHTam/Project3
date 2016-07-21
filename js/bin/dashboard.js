@@ -4,15 +4,26 @@ $(document).ready(function() {
   var currentUser = null
 
   // We are assuming Local Storage is supported
+  // logged out
   $(function () {
-    if (!window.localStorage['email'] || !window.localStorage['auth_token']) window.location.href = 'login.html'
+    if (!window.localStorage['email'] || !window.localStorage['auth_token']) {
+      // $('#login-state').html('Login')
+      window.location.href = 'register.html'
+    }
     else loadResources()
   })
 
+  //logged in
   // load page jquery and user greeting
   $('.modal-trigger').leanModal();
   $('.greeting').html("Welcome, " + window.localStorage['email'])
   $(".dropdown-button").dropdown();
+  $('#login-state').html('Logout').on('click', function() {
+    delete window.localStorage.email
+    delete window.localStorage.auth_token
+    // then redirect
+    window.location.href = 'register.html'
+  })
 
   // populate resource cards
   function loadResources () {
