@@ -1,20 +1,24 @@
 var serverURL = 'https://project3pockety.herokuapp.com/'
-console.log('delete-tag.js loaded')
+console.log('edit-tag.js loaded')
 
-$(function listenDelete () {
-  // listen for delete button
-  $('.resources').on('click', '#delete-tag', function (event) {
-    var resource = document.getElementById('resource');
+
+// card button launched modal
+$(function listenEdit () {
+  // listen for edit button
+  $('.resources').on('click', '.edit-resource', function (event) {
+    console.log(this)
+    var resource = this;
+    console.log(resource)
     var resourceID = resource.dataset.id
-    console.log('heard delete tag click event for resource ID ' + resourceID)
-    deleteResource(resourceID)
+    console.log('heard edit click event for resource ID ' + resourceID)
+    // editResource(resourceID)
   })
 })
 
-function deleteResource (resourceID) {
+function editResource (resourceID) {
   console.log(resourceID)
   $.ajax({
-    type: 'DELETE',
+    type: 'PUT',
     url: serverURL + 'resources',
     data: 'id=' + resourceID,
     beforeSend: function (xhr) {
