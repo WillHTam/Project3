@@ -6235,3 +6235,10 @@ h2 {
 
 #url:-ms-input-placeholder {
   color: lightgrey; }
+
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 100%; } }
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 90%; } }
