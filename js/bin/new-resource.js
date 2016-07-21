@@ -28,6 +28,7 @@ function newResource (formData) {
     beforeSend: function (xhr) {
       xhr.setRequestHeader('email', window.localStorage['email'])
       xhr.setRequestHeader('auth_token', window.localStorage['auth_token'])
+      $('#submit').html('Stashing...');
       console.log('sending ajax for new resource')
     },
     success: function (response) {
@@ -39,6 +40,9 @@ function newResource (formData) {
       console.log(xhr.status)
       console.log(thrownError)
       window.alert('Stashing New Resource Failed')
+    },
+    complete: function() {
+      $('#submit').html('Stashed <i class="material-icons right">done</i>')
     }
   })
 }
