@@ -3,7 +3,7 @@ console.log('delete-resource.js loaded')
 
 $(function listenDelete () {
   // listen for delete button
-  $('.resources').on('click', 'button', function (event) {
+  $('.resources').on('click', '.delete-resource', function (event) {
     console.log(this)
     var resource = this;
     console.log(resource)
@@ -23,6 +23,7 @@ function deleteResource (resourceID) {
       xhr.setRequestHeader('email', window.localStorage['email'])
       xhr.setRequestHeader('auth_token', window.localStorage['auth_token'])
       xhr.setRequestHeader('id', resourceID)
+      $('.delete-resource').html('Deleting...');
       console.log('sending ajax for new resource')
     },
     success: function (response) {
@@ -34,6 +35,10 @@ function deleteResource (resourceID) {
       console.log(xhr.status)
       console.log(thrownError)
       window.alert('Deleting Resource Failed')
+      timeout: 3000
+    },
+    complete: function () {
+      $('.delete-resource').html('Deleted <i class="material-icons">done</i>');
     }
   })
 }

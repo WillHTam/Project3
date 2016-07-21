@@ -18,6 +18,7 @@
   <script type="text/javascript" src="js/bin/dashboard.js"></script>
   <script type="text/javascript" src="js/bin/new-resource.js"></script>
   <script type="text/javascript" src="js/bin/delete-resource.js"></script>
+  <script type="text/javascript" src="js/bin/edit-resource.js"></script>
   <!-- masonry scripts -->
   <script src="js/bin/masonry.pkgd.min.js"></script>
   <script src="js/bin/init.js"></script>
@@ -26,6 +27,7 @@
 
     <!-- sidebar nav -->
     <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+
     <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0%);">
       <li class="logo">
         <img src="images/logo.png" alt="logo" id="logo">
@@ -60,105 +62,133 @@
         </li>
         <li class="bold">
           <a href="#" class="collapsible-header active waves-effect waves-teal">
-            <i class="material-icons tiny">settings</i> Settings</a>
-          </li>
-        </ul>
-      </header>
+            <i class="material-icons tiny">settings</i> Settings
+          </a>
+        </li>
+      </ul>
+    </ul>
 
-      <!-- search bar -->
-      <div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper search">
-            <form>
-              <div class="input-field">
-                <input placeholder="Search for resources and tags..." id="search" type="search" required>
-                <label for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
-              </div>
-            </form>
-          </div>
-        </nav>
-      </div>
+    <!-- search bar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper search">
+          <form>
+            <div class="input-field">
+              <input placeholder="Search for resources and tags..." id="search" type="search" required>
+              <label for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </div>
 
-      <!-- taskbar -->
-      <div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper">
-            <!-- <a class="page-title"></a> -->
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#new-resource-modal" class="modal-trigger"><i class="material-icons">add_circle_outline</i></a></li>
-              <li><a href="badges.html"><i class="material-icons">supervisor_account</i></a></li>
-              <li><a href="collapsible.html"><i class="material-icons">settings</i></a></li>
-              <li><a href="#" id="login-state">Logout</a></li>
-            </ul>
-            <ul class="left">
-              <li class="greeting"></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-      <!-- tabs bar -->
-      <div class="row" style="margin-left:240px;">
-        <div class="col s12">
-          <ul class="tabs" id="tabs">
-            <li class="tab col s3"><a href="#test1">Tech</a></li>
-            <li class="tab col s3"><a class="active" href="#test2">Art & Culture</a></li>
-            <li class="tab col s3"><a href="#test4">Science</a></li>
-            <li class="tab col s3"><a href="#test4">Design</a></li>
-            <li class="tab col s3"><a href="#test4">Global Affairs</a></li>
-            <li class="tab col s3"><a href="#test4">Personal</a></li>
-            <li class="tab col s3"><a href="#test4">Life</a></li>
-            <li class="tab col s3"><a href="#test4">Historical</a></li>
-            <li class="tab col s3"><a href="#test4">Tag 5</a></li>
-
+    <!-- taskbar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <!-- <a class="page-title"></a> -->
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#new-resource-modal" class="modal-trigger"><i class="material-icons">add_circle_outline</i></a></li>
+            <li><a href="badges.html"><i class="material-icons">supervisor_account</i></a></li>
+            <li><a href="collapsible.html"><i class="material-icons">settings</i></a></li>
+            <li><a href="#" id="login-state">Logout</a></li>
+          </ul>
+          <ul class="left">
+            <li class="greeting"></li>
           </ul>
         </div>
+      </nav>
+    </div>
+
+    <!-- tabs bar -->
+    <div class="row" style="margin-left:240px;">
+      <div class="col s12">
+        <ul class="tabs" id="tabs">
+          <li class="tab col s3"><a href="#test1">Tech</a></li>
+          <li class="tab col s3"><a class="active" href="#test2">Art & Culture</a></li>
+          <li class="tab col s3"><a href="#test4">Science</a></li>
+          <li class="tab col s3"><a href="#test4">Design</a></li>
+          <li class="tab col s3"><a href="#test4">Global Affairs</a></li>
+          <li class="tab col s3"><a href="#test4">Personal</a></li>
+          <li class="tab col s3"><a href="#test4">Life</a></li>
+          <li class="tab col s3"><a href="#test4">Historical</a></li>
+          <li class="tab col s3"><a href="#test4">Tag 5</a></li>
+
+        </ul>
       </div>
+    </div>
 
-      <!-- add new resource modal -->
-      <div id="new-resource-modal" class="modal">
-        <div class="modal-content">
-          <h4 class="header"></h4>
+    <!-- add new resource modal -->
+    <div id="new-resource-modal" class="modal">
+      <div class="modal-content">
+        <h4 class="header"></h4>
 
-          <form id="new-resource-form" class="col s12" action="https://project3pockety.herokuapp.com/resources" method="post">
+        <form id="new-resource-form" class="col s12" action="https://project3pockety.herokuapp.com/resources" method="post">
 
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="url" type="url" class="validate" name="url" placeholder="http://www.yay.com">
-                <label for="url" class="" data-error="Please enter valid url." data-success="Ready to roll.">Enter a URL</label>
-              </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="url" type="url" class="validate" name="url" placeholder="http://www.yay.com">
+              <label for="url" class="" data-error="Please enter valid url." data-success="Ready to roll.">Enter a URL</label>
             </div>
+          </div>
 
-            <div class="row">
-              <div class="input-field col s12">
-                <label for="tags">Tags</label>
-                <input type="text" name="tags" id="tags" value data-role="materialtags" style="display: none;">
-              </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="tags">Tags</label>
+              <input type="text" name="tags" id="tags" value data-role="materialtags" style="display: none;">
             </div>
+          </div>
 
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Stash
-              <i class="material-icons right">send</i>
-            </button>
-          </form>
+          <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Stash
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
 
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
-        </div>
       </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+      </div>
+    </div>
 
-      <!-- page content, cards -->
-      <main>
-        <div class="container resources">
-          <!-- <div class="row cards" id="masonry-grid">
+    <!-- edit resource modal -->
 
-          </div> -->
-          <!-- end masonry grid row div -->
+    <!-- <div id="edit-resource-modal" class="modal">
+    <div class="modal-content">
+    <h4 class="header"></h4>
 
-        </div>
-      </main>
+    <form id="edit-resource-form" class="col s12" action="https://project3pockety.herokuapp.com/resources" method="post">
+
+    <div class="row">
+    <div class="input-field col s12">
+    <label for="tags">Tags</label>
+    <input type="text" name="tags" id="tags" value data-role="materialtags" style="display: none;">
+  </div>
+</div>
+
+<button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Stash
+<i class="material-icons right">send</i>
+</button>
+</form>
+
+</div>
+<div class="modal-footer">
+<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+</div>
+</div> -->
+</header>
+
+<!-- page content, cards -->
+<main>
+  <div class="container resources">
+    <!-- <div class="row cards" id="masonry-grid">
+
+  </div> -->
+  <!-- end masonry grid row div -->
+
+</div>
+</main>
 
 
-    </body>
-    </html>
+</body>
+</html>
