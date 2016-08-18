@@ -46,7 +46,7 @@ $(document).ready(function() {
           )
           // show tags if there are any
           if (item.tags.length > 0) {
-            for (var i = 0; i < item.tags.length; i++) {
+            for (var i = 1; i < item.tags.length; i++) {
               $('#outer-tags').append('<div class="chip">' + item.tags[i] + '</div>')
               $('#inner-tags').append('<div class="chip">' + item.tags[i] + '</div>')
             }}
