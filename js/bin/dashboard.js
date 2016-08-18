@@ -45,8 +45,8 @@ $(document).ready(function() {
             '<div class="card-action">' + '<img class="favicon" src="' + 'https://www.google.com/s2/favicons?domain=' + item.site_name + '">' + '<span class="resource-site_name">' + item.site_name + '</span><a href="' + item.url + '" class="resource-original" target="_blank">Open<i class="material-icons right">open_in_new</i></a></div></div></div>'
           )
           // show tags if there are any
-          if (item.tags.length > 0) {
-            for (var i = 1; i < item.tags.length; i++) {
+          for (var i = 0; i < item.tags.length; i++) {
+            if (item.tags[i]) {
               $('#outer-tags').append('<div class="chip">' + item.tags[i] + '</div>')
               $('#inner-tags').append('<div class="chip">' + item.tags[i] + '</div>')
             }}
