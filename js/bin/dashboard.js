@@ -46,9 +46,10 @@ $(document).ready(function() {
           )
           // show tags
           for (var i = 0; i < item.tags.length; i++) {
+            if (item.tags.length) {
               $('#outer-tags').append('<div class="chip">' + item.tags[i] + '</div>')
               $('#inner-tags').append('<div class="chip">' + item.tags[i] + '</div>')
-            }
+            }}
         }) // end loop populating cards
 
         $('#masonry-grid').masonry({
