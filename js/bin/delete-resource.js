@@ -38,7 +38,7 @@ function deleteResource (resourceID) {
       timeout: 3000
     },
     complete: function () {
-      $('.delete-resource').html('Deleted <i class="material-icons">done</i>');
+      $('.delete-resource[data-id='+resourceID+']').html('Deleted <i class="material-icons">done</i>');
     }
   })
 }
