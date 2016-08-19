@@ -35,9 +35,11 @@ $(document).ready(function() {
         xhr.setRequestHeader('email', window.localStorage['email'])
         xhr.setRequestHeader('auth_token', window.localStorage['auth_token'])
         console.log('Loading resources')
+        $('.resources').append('<div class="progress"><div class="indeterminate"></div></div>')
       },
       success: function (response) {
         console.log('Received resources from server: ' + response)
+        $('.resources').html('')
         $('.resources').append('<div class="row cards" id="masonry-grid"></div>')
         $.each(response, function (index, item) {
           $('.cards').prepend(
