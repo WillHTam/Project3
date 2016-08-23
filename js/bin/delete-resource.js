@@ -23,7 +23,7 @@ function deleteResource (resourceID) {
       xhr.setRequestHeader('email', window.localStorage['email'])
       xhr.setRequestHeader('auth_token', window.localStorage['auth_token'])
       xhr.setRequestHeader('id', resourceID)
-      $('.delete-resource').html('Deleting...');
+      $('.delete-resource[data-id='+resourceID+']').html('Deleting...');
       console.log('sending ajax for new resource')
     },
     success: function (response) {
@@ -38,7 +38,7 @@ function deleteResource (resourceID) {
       timeout: 3000
     },
     complete: function () {
-      $('.delete-resource').html('Deleted <i class="material-icons">done</i>');
+      $('.delete-resource[data-id='+resourceID+']').html('Deleted <i class="material-icons">done</i>');
     }
   })
 }
